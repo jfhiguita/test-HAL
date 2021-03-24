@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block title %}Homepage{% endblock %}
+
+{% block main %}
+<div class="row">
+    <div class="col-lg-8 col-lg-offset-2">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title">Availables questions</h3>
+            </div>
+
+            <ul class="list-group">
+                {% for pol in poll %}
+                <li class="list-group-item">
+                    <strong>{{ pol.question }}</strong>
+                </li>
+                {% endfor %}
+            </ul>
+
+        </div>
+    </div>
+</div>
+{% endblock %}
